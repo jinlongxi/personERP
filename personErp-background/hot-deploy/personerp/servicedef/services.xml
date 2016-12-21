@@ -11,4 +11,11 @@
         </description>
     </service> 
     
+    <service name="findPerson" engine="java"
+            location="com.banfftech.personerp.PersonErpQueryService" invoke="findPersonInfo" auth="false">
+        <description>查询用户信息</description>
+        <attribute name="partyId" type="String" mode="IN" optional="false"/>
+        <attribute name="personInfo" type="Map" mode="OUT" optional="false"/>
+    </service>
+    
 </services>
