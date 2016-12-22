@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <SecurityPermission description="View operations in the P_Biz Component." permissionId="P_BIZ_VIEW"/>
+    <SecurityPermission description="Create operations in the P_Biz Component." permissionId="P_BIZ_CREATE"/>
+    <SecurityPermission description="Update operations in the P_Biz Component." permissionId="P_BIZ_UPDATE"/>
+    <SecurityPermission description="Delete operations in the P_Biz Component." permissionId="P_BIZ_DELETE"/>
+    <SecurityPermission description="ALL operations in the P_Biz Component." permissionId="P_BIZ_ADMIN"/>
+    <SecurityGroupPermission groupId="FULLADMIN" permissionId="P_BIZ_ADMIN"/>
+    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="P_BIZ_CREATE"/>
+    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="P_BIZ_DELETE"/>
+    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="P_BIZ_UPDATE"/>
+    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="P_BIZ_VIEW"/>
+    <SecurityGroupPermission groupId="VIEWADMIN" permissionId="P_BIZ_VIEW"/>
+    <SecurityGroupPermission groupId="BIZADMIN" permissionId="P_BIZ_ADMIN"/>
+</entity-engine-xml>

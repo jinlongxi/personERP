@@ -34,6 +34,7 @@ public class PersonErpQueryService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		List<String> personInfoList = FastList.newInstance();
 		String firstName= personInfo.get("firstName").toString();
 		String lastName= personInfo.get("lastName").toString();
