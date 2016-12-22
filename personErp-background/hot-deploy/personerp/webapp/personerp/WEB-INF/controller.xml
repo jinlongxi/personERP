@@ -25,11 +25,10 @@
     	<security https="true" auth="true"/>
     	<response name="success" type="view" value="main"/>
    	</request-map>
-   	
    	<!-- 查询用户信息 -->
 	<request-map uri="findPerson">
 		<!--<security https="true" auth="false" />-->
-    	<event type="service" invoke="findPerson"/>
+    	<event type="service" invoke="findPersonInfo"/>
         <response name="success" type="request" value="json"/>
         <response name="error" type="request" value="json"/>
     </request-map>

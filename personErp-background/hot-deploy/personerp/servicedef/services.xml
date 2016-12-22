@@ -9,13 +9,11 @@
         <description>
             Dummy service to prevent empty files and syntax error - Remove when the 1st real service will be added here 
         </description>
-    </service> 
-    
-    <service name="findPerson" engine="java"
-            location="com.banfftech.personerp.PersonErpQueryService" invoke="findPersonInfo" auth="false">
+    </service>
+    <service name="findPersonInfo" engine="java"
+            location="com.banfftech.personerp.PersonErpQueryService" invoke="findPersonInfo" auth="true">
         <description>查询用户信息</description>
         <attribute name="partyId" type="String" mode="IN" optional="false"/>
-        <attribute name="personInfo" type="Map" mode="OUT" optional="false"/>
-    </service>
-    
+        <attribute name="personInfoList" type="List" mode="OUT" optional="false"/>
+    </service> 
 </services>
