@@ -32,6 +32,20 @@
         <response name="success" type="request" value="json"/>
         <response name="error" type="request" value="json"/>
     </request-map>
+    <!-- 查询联系人信息 -->
+	<request-map uri="findContects">
+		<!--<security https="true" auth="false" />-->
+    	<event type="service" invoke="findContectsInfo"/>
+        <response name="success" type="request" value="json"/>
+        <response name="error" type="request" value="json"/>
+    </request-map>
+    <!-- 添加联系人 -->
+	<request-map uri="addContects">
+		<!--<security https="true" auth="false" />-->
+    	<event type="service" invoke="addContects"/>
+        <response name="success" type="request" value="json"/>
+        <response name="error" type="request" value="json"/>
+    </request-map>
     
     <!-- View Mappings -->
     <view-map name="main" type="screen" page="component://personerp/widget/PersonErpScreens.xml#main"/>

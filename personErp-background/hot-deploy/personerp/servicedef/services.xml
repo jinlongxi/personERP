@@ -11,9 +11,28 @@
         </description>
     </service>
     <service name="findPersonInfo" engine="java"
-            location="com.banfftech.personerp.PersonErpQueryService" invoke="findPersonInfo" auth="true">
+            location="com.banfftech.personerp.PersonErpQueryService" invoke="findPersonInfo" auth="false">
         <description>查询用户信息</description>
         <attribute name="partyId" type="String" mode="IN" optional="false"/>
-        <attribute name="personInfoList" type="List" mode="OUT" optional="false"/>
+        <attribute name="personInfoList" type="List" mode="OUT" optional="true"/>
+    </service>
+    <service name="findContectsInfo" engine="java"
+            location="com.banfftech.personerp.PersonErpQueryService" invoke="findContectsInfo" auth="false">
+        <description>查询用户信息</description>
+        <attribute name="partyId" type="String" mode="IN" optional="false"/>
+        <attribute name="partyIdList" type="List" mode="OUT" optional="true"/>
     </service> 
+    <service name="addContects" engine="java"
+            location="com.banfftech.personerp.PersonErpService" invoke="addContects" auth="false">
+        <description>添加联系人</description>
+        <attribute name="firstName" type="String" mode="IN" optional="false"/>
+        <attribute name="lastName" type="String" mode="IN" optional="false"/>
+        <attribute name="gender" type="String" mode="IN" optional="true"/>
+        <attribute name="contactNumber" type="String" mode="IN" optional="false"/>
+        <attribute name="contactAddress" type="String" mode="IN" optional="true"/>
+        <attribute name="contactEmail" type="String" mode="IN" optional="false"/>
+        <attribute name="contactGroup" type="String" mode="IN" optional="true"/>
+        <attribute name="contactCompany" type="String" mode="IN" optional="true"/>
+        <attribute name="partyId" type="String" mode="OUT" optional="true"/>
+    </service>
 </services>
