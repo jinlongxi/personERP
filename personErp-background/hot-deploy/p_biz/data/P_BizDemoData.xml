@@ -1,4 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <entity-engine-xml>
 
+    <!-- 定义人型种子数据 -->
+    <Party partyId="fenghao" partyTypeId="PERSON"/>
+    <Person partyId="fenghao" firstName="浩" lastName="冯"/>
+    <!-- 地址及电话 -->
+    <ContactMech contactMechId="10000" contactMechTypeId="POSTAL_ADDRESS"/>
+    <ContactMech contactMechId="10001" contactMechTypeId="TELECOM_NUMBER"/>
+    <!-- 地址电话关联数据 -->
+    <TelecomNumber contactMechId="10001" countryCode="1" areaCode="33" contactNumber="12456" lastUpdatedStamp="2008-05-23 11:57:41.179" lastUpdatedTxStamp="2008-05-23 11:57:39.476" createdStamp="2008-05-23 11:57:41.179" createdTxStamp="2008-05-23 11:57:39.476"/>
+    <PartyContactMech partyId="fenghao" contactMechId="10001" fromDate="2000-01-01 00:00:00.000" allowSolicitation="Y"/>
+    <PartyContactMech partyId="fenghao" contactMechId="10000" fromDate="2000-01-01 00:00:00.000" allowSolicitation="Y"/>
+    <PostalAddress contactMechId="10000" toName="Company XYZ" address1="2003 Open Blvd" city="杭州" postalCode="999999" countryGeoId="CHN" stateProvinceGeoId="CA" geoPointId="9000"/>
+
+
+
+
+
+    <!-- 定义人型种子数据 -->
+    <Party partyId="zhangwenwen" partyTypeId="PERSON"/>
+    <Person partyId="zhangwenwen" firstName="文文" lastName="张"/>
+    <!-- 地址及电话 -->
+    <ContactMech contactMechId="10002" contactMechTypeId="POSTAL_ADDRESS"/>
+    <ContactMech contactMechId="10003" contactMechTypeId="TELECOM_NUMBER"/>
+    <!-- 地址电话关联数据 -->
+    <TelecomNumber contactMechId="10003" countryCode="1" areaCode="33" contactNumber="12456" lastUpdatedStamp="2008-05-23 11:57:41.179" lastUpdatedTxStamp="2008-05-23 11:57:39.476" createdStamp="2008-05-23 11:57:41.179" createdTxStamp="2008-05-23 11:57:39.476"/>
+    <PartyContactMech partyId="zhangwenwen" contactMechId="10003" fromDate="2000-01-01 00:00:00.000" allowSolicitation="Y"/>
+    <PartyContactMech partyId="zhangwenwen" contactMechId="10002" fromDate="2000-01-01 00:00:00.000" allowSolicitation="Y"/>
+    <PostalAddress contactMechId="10002" toName="Company XYZ" address1="2003 Open Blvd" city="襄阳" postalCode="999999" countryGeoId="CHN" stateProvinceGeoId="CA" geoPointId="9000"/>
+
+
+    <!-- 定义人型种子数据 -->
+    <Party partyId="syl" partyTypeId="PERSON"/>
+    <Person partyId="syl" firstName="寅麟" lastName="沈"/>
+    <!-- 地址及电话 -->
+    <ContactMech contactMechId="10004" contactMechTypeId="POSTAL_ADDRESS"/>
+    <ContactMech contactMechId="10005" contactMechTypeId="TELECOM_NUMBER"/>
+    <!-- 地址电话关联数据 -->
+    <TelecomNumber contactMechId="10004" countryCode="1" areaCode="33" contactNumber="12456" lastUpdatedStamp="2008-05-23 11:57:41.179" lastUpdatedTxStamp="2008-05-23 11:57:39.476" createdStamp="2008-05-23 11:57:41.179" createdTxStamp="2008-05-23 11:57:39.476"/>
+    <PartyContactMech partyId="syl" contactMechId="10004" fromDate="2000-01-01 00:00:00.000" allowSolicitation="Y"/>
+    <PartyContactMech partyId="syl" contactMechId="10005" fromDate="2000-01-01 00:00:00.000" allowSolicitation="Y"/>
+    <PostalAddress contactMechId="10004" toName="Company XYZ" address1="2003 Open Blvd" city="上海" postalCode="999999" countryGeoId="CHN" stateProvinceGeoId="CA" geoPointId="9000"/>
+
+
+    <!-- 定义人型种子数据 -->
+    <Party partyId="jlx" partyTypeId="PERSON"/>
+    <Person partyId="jlx" firstName="龙熙" lastName="金"/>
+    <!-- 地址及电话 -->
+    <ContactMech contactMechId="10006" contactMechTypeId="POSTAL_ADDRESS"/>
+    <ContactMech contactMechId="10007" contactMechTypeId="TELECOM_NUMBER"/>
+    <!-- 地址电话关联数据 -->
+    <TelecomNumber contactMechId="10007" countryCode="1" areaCode="33" contactNumber="12456" lastUpdatedStamp="2008-05-23 11:57:41.179" lastUpdatedTxStamp="2008-05-23 11:57:39.476" createdStamp="2008-05-23 11:57:41.179" createdTxStamp="2008-05-23 11:57:39.476"/>
+    <PartyContactMech partyId="jlx" contactMechId="10006" fromDate="2000-01-01 00:00:00.000" allowSolicitation="Y"/>
+    <PartyContactMech partyId="jlx" contactMechId="10007" fromDate="2000-01-01 00:00:00.000" allowSolicitation="Y"/>
+    <PostalAddress contactMechId="10006" toName="Company XYZ" address1="2003 Open Blvd" city="白山" postalCode="999999" countryGeoId="CHN" stateProvinceGeoId="CA" geoPointId="9000"/>
+
+
+    <!-- 联系人关系 -->
+
+    <PartyRelationship partyIdFrom="syl" partyIdTo="jlx" partyRelationshipTypeId="CONTACT_REL" roleTypeIdFrom="_NA_" roleTypeIdTo="_NA_" fromDate="2001-01-01 12:00:00.0"/>
+    <PartyRelationship partyIdFrom="syl" partyIdTo="zhangwenwen" partyRelationshipTypeId="CONTACT_REL" roleTypeIdFrom="_NA_" roleTypeIdTo="_NA_" fromDate="2001-01-01 12:00:00.0"/>
+    <PartyRelationship partyIdFrom="syl" partyIdTo="fenghao" partyRelationshipTypeId="CONTACT_REL" roleTypeIdFrom="_NA_" roleTypeIdTo="_NA_" fromDate="2001-01-01 12:00:00.0"/>
+
 </entity-engine-xml>
